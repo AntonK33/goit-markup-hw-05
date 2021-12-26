@@ -204,9 +204,9 @@ display: flex;
     letter-spacing: 0.02em;   
     align-items: center;
     text-decoration: none;
-    
+    transition-property: color;
      transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-nav:hover,
@@ -225,9 +225,11 @@ display: flex;
     width: 10px;
     height: 16px;
     margin-right: 10px; 
-       transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+     transition-property:fill;
+     transition-duration:250ms;
+   transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
+  
 .address-nav:active{
     color: teal;
 }
@@ -240,9 +242,11 @@ display: flex;
     width: 16px;
     height: 12px;
     margin-right: 10px;
-       transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property:fill;
+     transition-duration: 250ms ;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 
 
@@ -264,7 +268,7 @@ display: flex;
 width: 100%;
 height: 4px;
 background-color: currentColor;
-bottom: -32px;
+bottom: -33px;
 border-radius: 2px;
    
 }
@@ -272,8 +276,9 @@ border-radius: 2px;
 
 .link{
     text-decoration: none;
-       transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property:color;
+     transition-duration: 250ms ;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover,
 .link:focus{
@@ -339,8 +344,10 @@ text-align: center;}
     text-align: center;
     letter-spacing: 0.06em; 
     border-radius: 4px;
+    padding: 10px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
 
 .backdrop{
     position: fixed;
@@ -348,9 +355,10 @@ text-align: center;}
    left: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);        
-    transition: opacity 250ms ;
-    transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(0, 0, 0, 0.2);    
+    transition-property:opacity;    
+    transition-duration:  250ms ;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .modal{
@@ -364,19 +372,22 @@ text-align: center;}
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 z-index: 2;
-  transition: transform 250ms;
+transition-property:  transform;
+  transition-duration: 250ms;
+  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1) ;
 
    
 }
 .is-hidden{    
     opacity: 0;
-   scale: 0.5;
+   
   
 pointer-events: none;
 }
 .backdrop.is-hidden .modal{
-  transition: transform 250ms;
-    transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1); 
+    transition-property:transform ;
+  transition-duration:  250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
    transform:translate(-50%,-50%) scale(0.9);
 
 }
@@ -392,11 +403,9 @@ pointer-events: none;
     margin-top:8px;
     margin-right: 8px;
     margin-left: auto;
-
+cursor: pointer;
 }
-.backdrop-cross{
 
-}
 /*Герой СВГ*/
 
 .icon-advantage{
@@ -575,7 +584,9 @@ justify-content: center;
     fill:#AFB1B8 ;
     width: 20px; 
     height: 20px;
-    
+    transition-property:fill ;
+   transition-duration: 250ms ;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-social:hover svg,
@@ -595,8 +606,9 @@ height: 44px;
 border-radius: 50%;
 align-items: center;
 justify-content: center;
+transition-property:background-color;
    transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-social:hover,
@@ -648,8 +660,9 @@ justify-content: center;
   border-radius: 4px;
   background: #F5F4FA;
   padding: 6px 22px;
-    transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property:color,background-color;
+    transition-duration:250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-type:hover,
@@ -713,7 +726,9 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 .portfolio-title{
 text-decoration: none;
 display: block;
-
+transition-property: box-shadow;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -731,11 +746,13 @@ display: block;
     width: 100%;
     height: 100%;
     transform: translatey(100%);
-          transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property:transform ;
+    transition-duration: 250ms ;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(33, 150, 243, 0.9);
 }
-.portfolio-title:hover .background-thumb{
+.portfolio-title:hover .background-thumb,
+.portfolio-title:focus .background-thumb{
 transform: translatey(0%);
 }
 .text-thumb{
@@ -751,7 +768,14 @@ transform: translate(-50%,-50%);
  text-align: center;
    width:322px ;
 height: 168px;
-
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+letter-spacing: 0.03em;
+color: #FFFFFF;
+transition-property: transform;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
  /*Наши партнеры*/
 
@@ -778,8 +802,9 @@ cursor: pointer;
     fill:  #AFB1B8;
     width: 106px;
     height: 60px;
+    transition-property: fill;
        transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);      
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);      
 }
 .client-container:hover svg,
 .client-container:focus svg{
@@ -795,10 +820,11 @@ width: 170px;
       display: flex;       
        align-items: center;
        justify-content: center;
+       transition-property: border-color ;
    transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+ 
 
 .client-content-title{
      margin-right: 30px; 
@@ -868,28 +894,18 @@ justify-content: center;
 height: 44px;
 border-radius: 50%;
 background: rgba(255, 255, 255, 0.1);
-cursor: pointer;   
+cursor: pointer; 
+transition-property: background-color;
+ transition-duration: 250ms;
+ transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1) ;    
 }
+.network-footer:hover,
 .network-footer:focus{
     background-color: var(--accent-color);
-            transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
-.network-twitter-footer{
-      display: flex;
-    align-items: center;
-    justify-content: center;
-    fill:#FFFFFF ; 
- width: 44px;
-height: 44px;
-border-radius: 50%;
-background:var(--accent-color);
-cursor: pointer;   
-} 
-.network-twitter-footer:focus{
-         transition-duration: 250ms ;
-   transition-timing-function: linear, cubic-bezier(0.4, 0, 0.2, 1);
-}
+
+
 .social-footer{
 margin-right: 10px;
  
